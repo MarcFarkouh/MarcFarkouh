@@ -1,0 +1,44 @@
+Monitor Program
+
+local monitor =  peripheral.wrap("right")
+monitor.setTextScale(0.95)
+monitor.setCursorPos(5,5)
+monitor.write("Please refer to the turtle")
+shell.run("startup")
+
+Turtle Program
+
+while true do
+local function Payment()
+turtle.selectslot (1)
+turtle.inspect slot (1)
+turtle.inspect slot= "5 iron" then
+turtleedu.say "Please proceed to room 1"
+end
+
+for x= 1,1 do
+Payment()
+end
+
+Local function Multiple Rooms()
+turtle.selectslot (2)
+turtle.inspect slot (2)
+turtle.inspect slot= "5 iron" then
+turtleedu.say "Please proceed to room 2"
+end
+
+for x=1,1 do 
+Multiple Rooms()
+end
+
+Local function LongerStay()
+turtle.selectslot(3)
+turtle.inspect slot (3)
+turtle.inspect slot= "1 gold" then
+turtleedu.say "Please proceed to room 3"
+end
+
+for x=1,1 do
+LongerStay()
+end
+end
