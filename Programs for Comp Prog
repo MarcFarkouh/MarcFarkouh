@@ -8,16 +8,18 @@ shell.run("startup")
 
 Turtle Program
 
-while true do
+local x=1
 
-turtle.inspectSlot (1)
-if turtleedu.inspectSlot(1)= "minecraft: iron" then
-turtleedu.say "Please proceed to room 1"
+while x<17 do
+  turtle.inspectSlot(x)
+  if turtle.inspectSlot(x)== "minecraft: iron" then
+  turtle.say "Please proceed to room 1"
+  end
+else x=x+1
 end
 
-turtle.inspectSlot (3)
-if turtleedu.inspectSlot(3)= "minecrfat: gold" then
-turtleedu.say "Please proceed to room 2"
+turtle.inspectSlot(x)
+  if turtle.inspectSlot(x)== "minecraft:gold" then
+  turtle.say "Please proceed to room 2"
+  end
 end
-
-turtle.
