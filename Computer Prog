@@ -1,0 +1,7 @@
+Monitor Program
+
+local monitor =  peripheral.wrap("right")
+monitor.setTextScale(0.95)
+monitor.setCursorPos(5,5)
+monitor.write("Please refer to the turtle")
+shell.run("startup")
