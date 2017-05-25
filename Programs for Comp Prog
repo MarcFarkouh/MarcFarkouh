@@ -21,6 +21,18 @@ turtle.inspectSlot(x)
   if turtle.inspectSlot(x)== "minecraft:diamond" then
   turtle.say "Please Proceed to room 3"
   end
-end
-  
-  
+
+local y= 1
+os.day()
+turtle.inspectDay()
+os.setAlarm(24)
+y=y+1
+
+y=y+1 
+turtle.say "Room 1, your stay is over"
+
+y=y+5
+turtle.say "Room 2, your stay is over"
+
+y=y+7
+turtle.say "Room 3, your stay is over"
