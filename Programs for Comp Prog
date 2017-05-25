@@ -1,25 +1,26 @@
-Monitor Program
-
-local monitor =  peripheral.wrap("right")
-monitor.setTextScale(0.95)
-monitor.setCursorPos(5,5)
-monitor.write("Please refer to the turtle")
-shell.run("startup")
-
 Turtle Program
 
 local x=1
 
 while x<17 do
-  turtle.inspectSlot(x)
-  if turtle.inspectSlot(x)== "minecraft: iron" then
+turtle.inspectSlot(x)
+  if turtle.inspectSlot(x)== "minecraft:iron" then
   turtle.say "Please proceed to room 1"
   end
-else x=x+1
-end
+    else x=x+1
+    end
 
 turtle.inspectSlot(x)
   if turtle.inspectSlot(x)== "minecraft:gold" then
   turtle.say "Please proceed to room 2"
   end
+    else x=x+1
+    end
+
+turtle.inspectSlot(x)
+  if turtle.inspectSlot(x)== "minecraft:diamond" then
+  turtle.say "Please Proceed to room 3"
+  end
 end
+  
+  
