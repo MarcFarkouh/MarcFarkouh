@@ -36,3 +36,4 @@ turtle.say "Room 2, your stay is over"
 
 y=y+7
 turtle.say "Room 3, your stay is over"
+end
