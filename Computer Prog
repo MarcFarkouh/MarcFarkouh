@@ -1,4 +1,5 @@
 Monitor Program
+--Just imput Payment into the program for the text to appear on the computer screen--
 
 shell.run("startup")
 local monitor =  peripheral.wrap("right")
