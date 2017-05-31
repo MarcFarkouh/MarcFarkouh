@@ -2,7 +2,6 @@ Turtle Program
 -- The variable was set--
 local x=1
 
-shell.run("startup")
 turtle.say "Hello, what may I help you with today"
 --Asks the customer if they need help--
 
