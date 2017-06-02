@@ -1,51 +1,43 @@
-Turtle Program
--- The variable was set--
+--The variable was set--
 local x=1
-
-turtle.say "Hello, what may I help you with today"
---Asks the customer if they need help--
-
+local y=1
+ 
+print("Hello, what may I help you with")
+print("Please put your payment in the turtles inventory")
+--Asks customers if they need help and where they have to pay--
+ 
 while x<17 do
-turtle.inspectSlot(x)
-  if turtle.inspectSlot(x)== "minecraft:iron" then
-  turtle.say "Please proceed to room 1"
-  end
-    else x=x+1
-    end
+ 
+turtle.getItemDetail(Iron)
+print("Proceed to Room 1")
+ 
 --This inspects all slots to see if there was a payment made for a one day stay, and if so, will tell the customer what room to proceed to--
-
-turtle.inspectSlot(x)
-  if turtle.inspectSlot(x)== "minecraft:gold" then
-  turtle.say "Please proceed to room 2"
-  end
-    else x=x+1
-    end
---This inspects the slots if a 5 day payment was made and direct the customer to his or her room--
-
-turtle.inspectSlot(x)
-  if turtle.inspectSlot(x)== "minecraft:diamond" then
-  turtle.say "Please Proceed to room 3"
-  end
---Finally, it will inspect the slots to check if a 7 day payment was made, and to dircet the customer to their room--
-
-local y= 1
+ 
+turtle.getItemDetail(Gold)
+print("Proceed to room 2")
+   
+--This inspects the slots if a 5 day payment was made, and direct the customer to his room--
+       
+turtle.getItemDetail(Diamond)
+print("Proceed to room 3")
+end  
+--Finally, it will inspect the slots to check if a 7 day payment was made, and to direct the customer to their room--      
+os.clock()
 os.day()
-turtle.inspectDay()
 os.setAlarm(24)
 y=y+1
---This allows the turtle to keep track of time, and the time a customer has stayed--
-y=y+1 
-turtle.say "Room 1, your stay is over"
-
-y=y+5
-turtle.say "Room 2, your stay is over"
-
-y=y+7
-turtle.say "Room 3, your stay is over"
---End statement used to close the while loop--
-end
+--This allows the turtle to keep track of time, and the time the customer has stayed--
+  if y=y+1 then
+  print("Room 1, your stay is over")
+  end
+    if y=y+5 then
+    print("Room 2, your stay is over")
+    end
+      if y=y+7 then
+      print("Room 3, your stay is over")
+      end
 --This tells specific room numbers that their stay is over--
-
-turtle.say "Thank you for staying at Chez Narkouh's, I hope you visit another time!"
-
+ 
+print("Thank you for staying at Chez Narkouh's, I hope you visit another time!")
+ 
 --The final thing the turtle does is thanks the customer for staying at Chez Narkouh's--
