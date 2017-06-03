@@ -4,7 +4,9 @@ Monitor Program
 shell.run("startup")
 local monitor =  peripheral.wrap("right")
 monitor.setTextScale(0.95)
+--Set sthe size of the text on th ecomputer screen--
 monitor.setCursorPos(5,5)
+--Sets the starting position of the writing on the monitor--
 monitor.write("Please refer to the turtle")
 
 --Tells customers where to pay for their stay--
