@@ -1,58 +1,56 @@
 --The variable was set--
-local x=1 --what the hell are these?
-local y=1
- 
-print("Hello, what may I help you with")
-print("Please put your payment in the turtles inventory")
---Asks customers if they need help and where they have to pay--
- 
+local x=1 --This is the variable set in order to check the slots of the turtle to confirm that there was a payment made--
+local os.day()=w --Going to be used for the checkin time for room 1--
+local os.day()=f --Going to be used for the checkin time for room 2--
+local os.day()=y --Going to be used for the checkin time for room 3--
+
+print("Hello to Chez Narkouhs")
+print("If you would like to stay at this 5 star hotel, please pay by putting payment inside the turtles inventory")
+--Welcomes Customer, and explains how to pay for a stay at Chez Narkouhs--
+
 while x<17 do
   local slotItem = turtle.getItemDetail(x) -- this returns three things, slotItem.name (block name), slotItem.damage (block damage), slotItem.count (block amount)
  
   if slotItem.name == "minecraft:iron" then
- 
     print("Proceed to Room 1")
     x=16
+    --It will check if a 1 day payment was made--
+    w=w+1
+    --Keeps track of the customers checkin day--
+    
   elseif slotItem.name == "minecraft:gold" then
- 
-  --This inspects all slots to see if there was a payment made for a one day stay, and if so, will tell the customer what room to proceed to--
- 
     print("Proceed to room 2")
     x=16
-  --This inspects the slots if a 5 day payment was made, and direct the customer to his room--
+    --This inspects if a 5 day payment was made--
+    f=f+5
+    --Keeps track once again of the customers checkin day--
+    
   elseif slotItem.name == "minecraft:diamond"  then
- 
     print("Proceed to room 3")
     x=16
+    --Finally, it will inspect the slots to check if a 7 day payment was made, and to direct the customer to their room-- 
+    y=y+7
+    --This y variable is used to keep track of what day the customer check in--
+  
   elseif x==16 then
     print("You did not pay sufficiently")
   end
+  --If the customer did not pay sufficiently, he will not be allowed in the hotel--
   x=x+1
 end  
- 
---Finally, it will inspect the slots to check if a 7 day payment was made, and to direct the customer to their room--      
-os.clock()
-os.day()
-os.setAlarm(24)
- 
---you may want to create variable called checkin time, also checkout time, and then you will want to compare them, perhaps by substracting them!
---you may also want to create a variable that says which room you are in :) either 1, 2 or 3.
-y=y+1 --what???
- 
---This allows the turtle to keep track of time, and the time the customer has stayed--
-if y=y+1 then
-  print("Room 1, your stay is over")
+--The x variable is added on to because it will make the while statement false and stop the program--
+
+if w==w+1 then
+ print (ʺRoom 1, your stay is overʺ)
+ end
+--This checks to see if the 1 day stay is over and will ask the customer to exit the room-- 
+  
+if f==f+5 then
+print (ʺRoom 2, your stay is overʺ)
 end
- 
-if y=y+5 then
-  print("Room 2, your stay is over")
+--This checks to see if the 5 day stay is over and will ask the customer to exit the room--
+
+if z==z+7 then
+print(ʺRoom 3, your stay is overʺ)
 end
- 
-if y=y+7 then
-  print("Room 3, your stay is over")
-end
---This tells specific room numbers that their stay is over--
- 
-print("Thank you for staying at Chez Narkouh's, I hope you visit another time!")
- 
---The final thing the turtle does is thanks the customer for staying at Chez Narkouh's--
+--Finally, it will check if the 7 day stay is over and will ask the customer to exit the room--
