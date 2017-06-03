@@ -1,4 +1,5 @@
 --The variables were set--
+
 local x=1 --This is the variable set in order to check the slots of the turtle to confirm that there was a payment made--
 local os.day()=w --Going to be used for the checkin time for room 1--
 local os.day()=f --Going to be used for the checkin time for room 2--
