@@ -1,5 +1,5 @@
 --The variable was set--
-local x=1
+local x=1 --what the hell are these?
 local y=1
  
 print("Hello, what may I help you with")
@@ -7,35 +7,50 @@ print("Please put your payment in the turtles inventory")
 --Asks customers if they need help and where they have to pay--
  
 while x<17 do
+  local slotItem = turtle.getItemDetail(x) -- this returns three things, slotItem.name (block name), slotItem.damage (block damage), slotItem.count (block amount)
  
-turtle.getItemDetail(Iron)
-print("Proceed to Room 1")
+  if slotItem.name == "minecraft:iron" then
  
---This inspects all slots to see if there was a payment made for a one day stay, and if so, will tell the customer what room to proceed to--
+    print("Proceed to Room 1")
+    x=16
+  elseif slotItem.name == "minecraft:gold" then
  
-turtle.getItemDetail(Gold)
-print("Proceed to room 2")
-   
---This inspects the slots if a 5 day payment was made, and direct the customer to his room--
-       
-turtle.getItemDetail(Diamond)
-print("Proceed to room 3")
+  --This inspects all slots to see if there was a payment made for a one day stay, and if so, will tell the customer what room to proceed to--
+ 
+    print("Proceed to room 2")
+    x=16
+  --This inspects the slots if a 5 day payment was made, and direct the customer to his room--
+  elseif slotItem.name == "minecraft:diamond"  then
+ 
+    print("Proceed to room 3")
+    x=16
+  elseif x==16 then
+    print("You did not pay sufficiently")
+  end
+  x=x+1
 end  
+ 
 --Finally, it will inspect the slots to check if a 7 day payment was made, and to direct the customer to their room--      
 os.clock()
 os.day()
 os.setAlarm(24)
-y=y+1
+ 
+--you may want to create variable called checkin time, also checkout time, and then you will want to compare them, perhaps by substracting them!
+--you may also want to create a variable that says which room you are in :) either 1, 2 or 3.
+y=y+1 --what???
+ 
 --This allows the turtle to keep track of time, and the time the customer has stayed--
-  if y=y+1 then
+if y=y+1 then
   print("Room 1, your stay is over")
-  end
-    if y=y+5 then
-    print("Room 2, your stay is over")
-    end
-      if y=y+7 then
-      print("Room 3, your stay is over")
-      end
+end
+ 
+if y=y+5 then
+  print("Room 2, your stay is over")
+end
+ 
+if y=y+7 then
+  print("Room 3, your stay is over")
+end
 --This tells specific room numbers that their stay is over--
  
 print("Thank you for staying at Chez Narkouh's, I hope you visit another time!")
