@@ -1,4 +1,4 @@
---The variable was set--
+--The variables were set--
 local x=1 --This is the variable set in order to check the slots of the turtle to confirm that there was a payment made--
 local os.day()=w --Going to be used for the checkin time for room 1--
 local os.day()=f --Going to be used for the checkin time for room 2--
@@ -9,7 +9,8 @@ print("If you would like to stay at this 5 star hotel, please pay by putting pay
 --Welcomes Customer, and explains how to pay for a stay at Chez Narkouhs--
 
 while x<17 do
-  local slotItem = turtle.getItemDetail(x) -- this returns three things, slotItem.name (block name), slotItem.damage (block damage), slotItem.count (block amount)
+  local slotItem = turtle.getItemDetail(x) 
+  --this returns three things, slotItem.name (block name), slotItem.damage (block damage), slotItem.count (block amount) of the item that was put in the inventory of the turtle--
  
   if slotItem.name == "minecraft:iron" then
     print("Proceed to Room 1")
@@ -41,8 +42,8 @@ end
 --The x variable is added on to because it will make the while statement false and stop the program--
 
 if w==w+1 then
- print (ʺRoom 1, your stay is overʺ)
- end
+print (ʺRoom 1, your stay is overʺ)
+end
 --This checks to see if the 1 day stay is over and will ask the customer to exit the room-- 
   
 if f==f+5 then
