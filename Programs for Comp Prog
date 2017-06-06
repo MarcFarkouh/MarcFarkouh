@@ -43,12 +43,12 @@ end
 --The x variable is added on to because it will make the while statement false and stop the program--
 
 if os.day==w+1 then
-print (ʺRoom 1, your stay is overʺ)
+print(ʺRoom 1, your stay is overʺ)
 end
 --This checks to see if the 1 day stay is over and will ask the customer to exit the room-- 
   
 if os.day()==f+1 then
-print (ʺRoom 2, your stay is overʺ)
+print(ʺRoom 2, your stay is overʺ)
 end
 --This checks to see if the 5 day stay is over and will ask the customer to exit the room--
 
