@@ -1,9 +1,9 @@
 --The variables were set--
 
 local x=1 --This is the variable set in order to check the slots of the turtle to confirm that there was a payment made--
-local os.day()=w --Going to be used for the checkin time for room 1--
-local os.day()=f --Going to be used for the checkin time for room 2--
-local os.day()=y --Going to be used for the checkin time for room 3--
+local w= os.day() --Going to be used for the checkin time for room 1--
+local f= os.day() --Going to be used for the checkin time for room 2--
+local y= os.day() --Going to be used for the checkin time for room 3--
 
 print("Hello to Chez Narkouhs")
 print("If you would like to stay at this 5 star hotel, please pay by putting payment inside the turtles inventory")
@@ -42,17 +42,17 @@ while x<17 do
 end  
 --The x variable is added on to because it will make the while statement false and stop the program--
 
-if w==w+1 then
+if os.day==w+1 then
 print (ʺRoom 1, your stay is overʺ)
 end
 --This checks to see if the 1 day stay is over and will ask the customer to exit the room-- 
   
-if f==f+5 then
+if os.day()==f+1 then
 print (ʺRoom 2, your stay is overʺ)
 end
 --This checks to see if the 5 day stay is over and will ask the customer to exit the room--
 
-if z==z+7 then
+if os.day()==x+1 then
 print(ʺRoom 3, your stay is overʺ)
 end
 --Finally, it will check if the 7 day stay is over and will ask the customer to exit the room--
